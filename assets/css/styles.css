@@ -1,0 +1,1386 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary: #0077b6;
+    --secondary: #48cae4;
+    --card: #a7a7a7d4;
+    --text-dark: #171717;
+    --text-light: #737373;
+    --extra-light: #f4f6f5;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: 'Merriweather', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section__container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--primary-color);
+}
+
+.section__description{
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+.btn{
+    display: inline-block;
+    padding: 0.6rem 0.9rem;
+    background: var(--primary);
+    border-radius: .5rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.btn:hover{
+    background: var(--secondary);
+}
+
+
+html,
+body { 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+nav{
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    z-index: 20;
+}
+
+.nav__header{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+.nav__logo .logo{
+    color: var(--white);
+}
+
+.nav__logo .logo span{
+    color: var(--secondary);
+}
+ 
+
+.nav__menu__btn{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--primary);
+    transition: .5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.nav__links.open{
+    transform: translateY(0);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--white);
+}
+
+.nav__search{     
+    display: none;
+}
+.nav__user{
+    margin-left: 6rem;
+    margin-right: 5rem;
+}
+/* Home */
+.header__container{
+    padding: 0;
+}
+
+.header__container .slide{
+    min-height: 80vh;
+    background-size: cover !important;
+    background-position: center !important;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.header__container .slide::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+
+.header__container .slide .content{
+    width: 80rem;
+    text-align: center;
+}
+
+.header__container .slide .content h3{
+    font-size: 3rem;
+    text-transform: initial;
+    color: var(--white);
+    line-height: 1.1;
+    padding: 2rem 0;
+}
+
+.swiper-button-next, 
+.swiper-button-prev{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--faint-white);
+    color: var(--black);
+    border-radius: 50%;
+}
+
+.swiper-button-next:hover, 
+.swiper-button-prev:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after{
+    font-size: 2rem;
+}
+
+.deals__container{
+    display: grid;
+    gap: 2rem;
+}
+.deals__container h2{
+    color: var(--primary);
+}
+.deals__card i{
+    color: var(--primary);
+}
+
+.deals__card span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.deals__card h4{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.deals__card p{
+    color: var(--text-light);
+}
+
+
+
+.about__header{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about__header .section__header{
+    color: var(--primary);
+}
+
+.about__header .section__description{
+    max-width: 600px;
+}
+
+.about__btn{
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    white-space: nowrap;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+.about__content{
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.about__grid{
+    display: grid;
+    gap: 2rem;
+}
+
+.about__image{
+    overflow: hidden;
+}
+
+.about__card h3{
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.about__card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.about__card p{
+    color: var(--text-light);
+}
+
+.vehicle__header{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #0077b6;
+    margin-left: 1.2rem;
+}
+
+.vehicles .slide{
+    background: var(--white);
+    border: .1rem solid rgba(0,0,0,0.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 4rem;
+}
+
+.vehicles .slide .image{
+    height: 15rem;
+    width: 100%;
+    padding: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.vehicles .slide .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.vehicles .slide .image .price{
+    position: absolute;
+    top: 1.5rem; left: 1.5rem;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    text-transform: lowercase;
+}
+
+.vehicles .slide .image .fa-shopping-cart{
+    position: absolute;
+    top: 2.5rem; right: 2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 50%;
+}
+
+.vehicles .slide .image .fa-shopping-cart:hover{
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.vehicles .slide .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.vehicles .slide .content h3{
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.vehicles .slide .content p{
+    font-size: 1rem;
+    color: #666;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.vehicles .slide .content .stars{
+    padding: 1rem 0;
+}
+
+.vehicles .slide .content .stars i{
+    font-size: 1.2rem;
+    color: var(--primary );
+}
+
+.apply__header{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.apply__header .section__header{
+    color: var(--primary);
+}
+
+.apply__header .section__description{
+    max-width: 600px;
+}
+
+.apply__btn{
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    white-space: nowrap;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+.apply__content{
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.apply__grid{
+    display: grid;
+    gap: 2rem;
+}
+
+.apply__image{
+    overflow: hidden;
+}
+
+.apply__card h3{
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.apply__card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.apply__card p{
+    color: var(--text-light);
+}
+
+
+
+
+/* footer */
+.footer{
+    background-color: var(--primary);
+}
+
+.footer__container{
+    display: grid;
+    gap: 2rem 1rem;
+}
+
+.footer__logo{
+    margin-bottom: 1rem;
+}
+
+.footer__logo .logo{
+    color: var(--white);
+}
+
+.footer__col p{
+    margin-bottom: 2rem;
+    color: var(--extra-light);
+    opacity: 0.8;
+}
+
+.footer__socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__socials a{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.footer__socials a:hover{
+    opacity: 0.5;
+}
+
+.footer__col h4{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.footer__links{
+    display: grid;
+    gap: 0.6rem; 
+}
+
+.footer__links a{
+    color: var(--extra-light);
+    opacity: 0.8;
+}
+
+.footer__links a:hover{
+    opacity: 1;
+}
+
+.footer__bar{
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--extra-light);
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* Ask for Transport */
+.transport__header__container {
+    background: url('../images/ask_for_transport.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.transport__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.transport__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.transport__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.transport__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.transport__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.transport__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Available Cars Section */
+.car__header .section__header{
+    color: var(--primary);
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-top: 4rem;
+}
+
+.cars__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.car__card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.car__card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.car__card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.car__card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.car__card .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.car__card .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Excavator */
+.excavator__header__container {
+    background: url('../images/excavator.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.excavator__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.excavator__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.excavator__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.excavator__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.excavator__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.excavator__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Dump Truck */
+.dump__truck__header__container {
+    background: url('../images/Vehicles/dump-truck-1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.dump__truck__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dump__truck__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.dump__truck__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dump__truck__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dump__truck__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dump__truck__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+/* Recovery Truck */
+.recovery__header__container {
+    background: url('../images/Vehicles/recovery.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.recovery__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.recovery__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.recovery__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.recovery__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recovery__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.recovery__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Water Truck */
+.water__header__container {
+    background: url('../images/Vehicles/water-truck-slide.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.water__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.water__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.water__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.water__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.water__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.water__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* sand Truck */
+.sand__header__container {
+    background: url('../images/Vehicles/Sand-truck-1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.sand__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.sand__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.sand__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.sand__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sand__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sand__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+/* exhauster Truck */
+.exhauster__header__container {
+    background: url('../images/Vehicles/Sand-truck-1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.exhauster__header__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.exhauster__header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.exhauster__header__content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.exhauster__header__content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.exhauster__header__content .btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.exhauster__header__content .btn:hover {
+    background-color: var(--secondary);
+}
+
+
+@media (width > 1020px){
+    .deals__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .deals__card:nth-child(1){ 
+        grid-column: unset;
+    }
+
+    .about__grid{
+        gap: 4rem 2rem;
+    }
+    .apply__grid{
+        gap: 4rem 2rem;
+    }
+    .footer__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .transport__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .transport__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .transport__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .excavator__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .excavator__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .excavator__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .dump__truck__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .dump__truck__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .dump__truck__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .recovery__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .recovery__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .recovery__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .water__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .water__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .water__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .sand__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .sand__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .sand__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .exhauster__header__content h1 {
+        font-size: 2.5rem;
+    }
+
+    .exhauster__header__content p {
+        font-size: 1.25rem;
+    }
+
+    .exhauster__header__content .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    .cars__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .car__header .section__header {
+        font-size: 2rem;
+    }
+
+}
+
+
+
+@media (width > 768px) {
+    nav{
+        position: static;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .nav__header{
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+    .nav__menu__btn{
+        display: none;
+    }
+    .nav__logo .logo{
+        color: var(--primary);
+    }
+    .nav__links{
+        position: static;
+        padding: 0;
+        width: fit-content;
+        flex-direction: row;
+        gap: 3rem;
+        background-color: transparent;
+        transform: none;
+    }
+    .nav__links a{
+        color: var(--text-dark);
+    }
+    .nav__links a:hover{
+        color: var(--primary);
+    }
+    
+    .header__container{
+        padding-top: 0;
+    }
+    .about__header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about__content{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about__image{
+        grid-area: 1/2/2/3;
+    }
+
+    .apply__header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .apply__content{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .apply__image{
+        grid-area: 1/2/2/3;
+    }
+    .footer__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .transport__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .transport__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .transport__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    .excavator__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .excavator__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .excavator__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    .dump__truck__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .dump__truck__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .dump__truck__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .recovery__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .recovery__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .recovery__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .water__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .water__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .water__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .sand__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .sand__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .sand__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .exhauster__header__content h1 {
+        font-size: 2rem;
+    }
+
+    .exhauster__header__content p {
+        font-size: 1.1rem;
+    }
+
+    .exhauster__header__content .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    
+}
+@media (width < 768px){
+    .header__container .slide .content h3{
+        font-size: 1.5rem;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev{
+        display: none;
+    }
+    .cars__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .car__header .section__header {
+        font-size: 1.8rem;
+    }
+}
+
+@media (width > 540px){
+    .deals__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .about__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .apply__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media (width < 540px){
+    .section__header{
+        font-size: 1.4rem;
+    }
+    .deals__card h4{
+        font-size: 1rem;
+    }
+    .deals__card p{
+        font-size: .8rem;
+    }
+    .about__header h2{
+        font-size: 1.3rem;
+    }
+    .about__header p{
+        display: flex;
+        font-size: 0.8rem;
+        text-overflow: initial;
+    }
+    .about__image img{
+        width: 280px;
+    }
+
+    .apply__header h2{
+        font-size: 1.3rem;
+    }
+    .apply__header p{    
+        font-size: 0.8rem;
+    }
+    .apply__image img{
+        width: 280px;
+    }
+    .transport__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .transport__header__content p {
+        font-size: 1rem;
+    }
+
+    .transport__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .excavator__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .excavator__header__content p {
+        font-size: 1rem;
+    }
+
+    .excavator__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .dump__truck__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .dump__truck__header__content p {
+        font-size: 1rem;
+    }
+
+    .dump__truck__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .recovery__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .recovery__header__content p {
+        font-size: 1rem;
+    }
+
+    .recovery__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .water__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .water__header__content p {
+        font-size: 1rem;
+    }
+
+    .water__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .sand__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .sand__header__content p {
+        font-size: 1rem;
+    }
+
+    .sand__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .exhauster__header__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .exhauster__header__content p {
+        font-size: 1rem;
+    }
+
+    .exhauster__header__content .btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .cars__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
