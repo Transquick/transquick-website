@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/transquick-logo.png"
+      type="image/svg+xml"
+    />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="assets/css/apply.css" />
+    <title>New Applicants</title>
+</head>
+<body>
+
+  <div id="page" class="site">
+    <div class="container">
+      <div class="form-box">
+        <div class="progress">
+          <div class="arrow-back">
+            <a href="index.html"><i class="ri-arrow-left-s-line"></i></a>
+          </div>
+          <div class="logo"><a href="index.html"><span>Trans</span>Quick </a></div>
+          <ul class="progress-steps">
+            <li class="step active">
+              <span>1</span>
+              <p>Personal<br><span>25 secs to Complete</span></p>
+            </li>
+            <li class="step">
+              <span>2</span>
+              <p>Contact<br><span>60 secs to Complete</span></p>
+            </li>
+            <li class="step">
+              <span>3</span>
+              <p>Security<br><span>30 secs to Complete</span></p>
+            </li>
+          </ul>
+        </div>
+        <form action="">
+          <div class="form-one form-step active">
+            <div class="bg-svg"></div>
+            <h2>Personal Information</h2>
+            <p>Enter your personal information correctly</p>
+            <div>
+              <label>First Name</label>
+              <input type="text" placeholder="e.g John">
+            </div>
+            <div>
+              <label>Last Name</label>
+              <input type="text" placeholder="e.g Doe">
+            </div>
+            <div class="birth">
+              <label>Date of Birth</label>
+              <div class="grouping">
+                <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="YYYY">
+              </div>
+            </div>
+          </div>
+          <div class="form-two form-step">
+            <div class="bg-svg"></div>
+            <h2>Contact</h2>
+            <div>
+              <label>Phone</label>
+              <input type="tel" placeholder="e.g +254 712 345 678">
+            </div>
+            <div>
+              <label>ID No</label>
+              <input type="number" placeholder="e.g 712345678">
+            </div>
+            <div>
+              <label>County</label>
+              <input type="text" placeholder="e.g Nairobi">
+            </div>
+            <div>
+              <label>City</label>
+              <input type="text" placeholder="e.g Nairobi">
+            </div>
+            <div>
+              <label>Country</label>
+              <select name="country" id="country">
+                <option value="">Please Select</option>
+                <option value="kenya">Kenya</option>
+                <option value="uganda">Uganda</option>
+                <option value="tanzania">Tanzania</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="form-three form-step">
+            <div class="bg-svg"></div>
+            <h2>Security</h2>
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email address">
+            </div>
+            <div>
+              <label>Username</label>
+              <input type="text" placeholder="Enter your username">
+            </div>
+            <div>
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password">
+            </div>
+            <div>
+              <input type="password" placeholder="Confirm your password">
+            </div>
+            <div class="checkbox">
+              <input type="checkbox">
+              <label>Accept terms and conditions</label>
+            </div>
+          </div> 
+          <div class="btn-group">
+            <button type="button" class="btn-prev" disabled>Back</button>
+            <button type="button" class="btn-next" >Next Step</button>
+            <button type="button" class="btn-submit" >Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <script src="assets/js/apply.js"></script>
+</body>
+</html>
